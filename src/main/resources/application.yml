@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: enterprise-knowledge-copilot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/copilot
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      connection-init-sql: "SET TIME ZONE 'Asia/Kolkata';"
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
