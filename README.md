@@ -52,6 +52,7 @@ cd enterprise-knowledge-copilot
 
 2. Create .env file
 DB_NAME=copilot
+DB_URL=jdbc:postgresql://localhost:5432/copilot
 DB_USERNAME=copilot
 DB_PASSWORD=copilot
 
